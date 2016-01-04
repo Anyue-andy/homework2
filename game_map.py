@@ -80,7 +80,7 @@ class GameMap(object):
         DIRECTIONS = {"up":(-1, 0, ),"up+":(-2, 0, ),
         "down":(1, 0, ),"down+": (2, 0, ),
         "left":(0, -1, ),"left+":(0, -2,),
-        "right": (0, 1, ),"right+":(2, 0, )}
+        "right": (0, 1, ),"right+":(0, 1, )}
         count = 0
         for d in DIRECTIONS:
             d_row = row + DIRECTIONS[d][0]
