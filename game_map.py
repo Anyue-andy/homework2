@@ -57,11 +57,11 @@ class GameMap(object):
         for row in self.cells:
             for col_num in range(self.cols):
                # row[col_num] = 1 if random.random() < possibility_live else 0
-                if random.random() < possibility_live:
-                    if random.random()==possibility_wall:
-                        row[col_num] = -1
-                    else:
-                        row[col_num] = 1
+                if random.random() >= possibility_live:
+                     row[col_num] = 1
+                elif random.random()==possibility_wall:
+                     row[col_num] = -1
+
                 else:
                     row[col_num] = 0
 
